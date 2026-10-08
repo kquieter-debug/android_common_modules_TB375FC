@@ -1,0 +1,12 @@
+load("//build/kernel/kleaf:kernel.bzl", "kernel_module")
+
+kernel_module(
+    name = "mipp_pen0",
+    srcs = glob([
+        "*.c",
+        "*.h",
+        "Makefile",
+    ]),
+    outs = ["mipp_pen0.ko"],
+    kernel_build = "//common:kernel_aarch64",
+)
